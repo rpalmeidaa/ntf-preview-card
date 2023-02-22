@@ -1,0 +1,152 @@
+@use 'variables'
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+
+body
+    background: variables.$dark-main
+    font-family: 'Outfit'
+    font-size: 18px
+    color: variables.$soft
+    display: flex  
+    justify-content: center
+    align-items: center  
+    min-height: 100vh
+
+.container
+    border-radius: 1rem
+    max-width: 430px
+    padding: 1.5rem
+
+.box
+    background: variables.$dark-main
+    margin: 1rem 1rem
+    box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.50)
+    
+.card
+    background: variables.$dark-card
+    border-radius: 0.8rem
+    padding: 1.5rem
+    display: flex
+    flex-direction: column
+
+    &-title
+        padding: 1.5rem 0 0.5rem 0
+        a
+            color: variables.$white
+            font-size: 22px
+            font-weight: 400
+            cursor: pointer
+            transition: 0.4s
+
+        a:hover
+            color: variables.$cyan    
+
+        p
+            color: variables.$soft
+            font-weight: 100 
+            padding: 1rem 0 1rem 0
+
+.card-img-top
+    border-radius: 0.5rem
+    overflow: hidden
+    position: relative
+    cursor: pointer
+    
+.card-img-top img    
+    width: 100%
+    display: block
+
+.img-overlay
+    position: absolute
+    left:0
+    top:0
+    height: 100%
+    width: 100%
+    background: variables.$cyan2
+    display: none
+
+.img-overlay img
+    position: absolute
+    width: 50px
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+
+.card-img-top:hover .img-overlay
+    display: block
+
+.info
+    width: 100%
+    align-items: center
+    justify-content: center
+    display: flex
+    justify-content: space-between
+    padding-bottom: 1.5rem
+    border-bottom: variables.$dark-line 1px solid
+
+    &-price
+        display: flex
+        justify-content: space-between
+
+        img
+            width: 0.7rem
+        b
+            font-size: 16px
+            color: variables.$cyan
+            padding-left: 0.5rem
+  
+    &-details
+        display: flex
+        justify-content: space-between
+        
+        img
+            width: 1rem   
+            height: 1rem   
+        p
+            font-size: 16px
+            padding-left: 0.5rem                     
+
+.person
+    display: flex
+    img
+        width: 2.1rem   
+        height: 2.1rem 
+        border-radius: 50%
+        border: variables.$white 1px solid
+        margin: 1rem 1rem 0 0
+
+    span
+        margin: 1.5rem 1rem 0 0    
+        font-size: 16px
+        font-weight: 100
+    a
+        color: variables.$white
+        font-weight: 100
+        cursor: pointer
+        transition: 0.3s
+
+    a:hover
+        color: variables.$cyan
+
+@media screen and ( max-width: 500px )
+    .card-title
+        a
+            font-size: 20px
+        p
+            font-size: 15px    
+
+.info
+    b 
+        font-size: 15px    
+    p
+        font-size: 15px  
+
+.person
+    span
+        font-size: 15px
+    a
+        font-size: 15px
+
+        
